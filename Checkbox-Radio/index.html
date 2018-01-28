@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Pick twins</title>
-    <link rel="shortcut icon" href="img/favicon.jpg" type="image/jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-  </head>
-  <body>
-    <div class="container">
 
+<head>
+  <meta charset="UTF-8">
+  <title>Pick twins</title>
+  <link rel="shortcut icon" href="img/favicon.jpg" type="image/jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div class="checkbox">
+        <input type="checkbox" id="first">
+        <label for="first">
+          <span class="checkbox__item"></span>
+          <span>Принимяю соглашение</span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="second">
+        <label for="second">
+          <span class="checkbox__item"></span>
+          <span>Отправить на почту</span>
+        </label>
+      </div>
     </div>
-  </body>
+    <div>
+      <div class="radio">
+        <div class="">
+          <input type="radio" id="yes" name="radio" value="y" checked="checked">
+          <label for="yes">
+          <span class="radio__item"></span>
+          <span class="radio__text">Да</span>
+        </label>
+        </div>
+        <div class="">
+          <input type="radio" id="no" name="radio" value="n">
+          <label for="no">
+            <span class="radio__item"></span>
+            <span class="radio__text">Нет</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
