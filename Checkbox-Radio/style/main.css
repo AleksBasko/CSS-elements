@@ -17,147 +17,137 @@ body {
   padding-top: 100px;
 }
 
-.radio {
-    input[type='radio'] {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    input[type='radio'] + label {
-        position: relative;
-        display: flex;
-        cursor: pointer;
-    }
-
-    .radio__item {
-        position: relative;
-        display: block;
-        width: 24px;
-        height: 24px;
-        border: 1px solid #0097b3;
-        border-radius: 50%;
-        transition: border .3s;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 8px;
-            height: 8px;
-            margin-top: -4px;
-            margin-left: -4px;
-            background-color: #0097b3;
-            border-radius: 50%;
-            opacity: 0;
-            transform: scale(0);
-            transition: all .3s;
-        }
-    }
-
-    .radio__text {
-      transition: all .3s;
-    }
-
-    //label:hover {
-    //    .radio__item {
-    //        border-width: 2px;
-    //    }
-    //}
-
-    input[type='radio']:checked + label {
-      cursor: default;
-
-      .radio__item {
-          background-color: #fff;
-
-          &:before {
-              opacity: 1;
-              transform: scale(1);
-          }
-      }
-      .radio__text {
-        color: #0097b3;
-      }
-    }
+.radio input[type='radio'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.radio input[type='radio'] + label {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+.radio .radio__item {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #0097b3;
+  border-radius: 50%;
+  -webkit-transition: border .3s;
+  -o-transition: border .3s;
+  transition: border .3s;
+}
+.radio .radio__item:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  margin-left: -4px;
+  background-color: #0097b3;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.radio .radio__text {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.radio input[type='radio']:checked + label {
+  cursor: default;
+}
+.radio input[type='radio']:checked + label .radio__item {
+  background-color: #fff;
+}
+.radio input[type='radio']:checked + label .radio__item:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.radio input[type='radio']:checked + label .radio__text {
+  color: #0097b3;
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    margin-right: 28px;
-
-    input[type='checkbox'] {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    .checkbox__item {
-        position: relative;
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-        border: 1px solid #1797b1;
-        border-radius: 5px;
-
-        //&:hover {
-        //    border-width: 2px;
-        //}
-    }
-
-    label {
-        display: flex;
-        align-items: center;
-        font-size: 16px;
-        line-height: 24px;
-        color: #13353f;
-        cursor: pointer;
-        span {
-            display: inline-block;
-            transition: all .3s;
-        }
-    }
-
-    input[type='checkbox']:checked + label {
-        color: #0097b3;
-
-        .checkbox__item {
-            position: relative;
-            background-color: #1797b1;
-
-            //&:hover {
-            //    border-width: 1px;
-            //}
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background: url('/image/bg-elements/icon-check.svg') center no-repeat;
-            }
-        }
-    }
-    &.checkbox--info {
-        input[type='checkbox']:checked + label {
-            font-weight: bold;
-
-            .checkbox__item {
-                background-color: #fff;
-                border-color: #fff;
-
-                //&:hover {
-                //    border-color: #fff;
-                //}
-
-                &:before {
-                    background: url('/image/bg-elements/icon-check--white.svg') center no-repeat;
-                }
-            }
-        }
-    }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 28px;
+}
+.checkbox input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.checkbox .checkbox__item {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border: 1px solid #1797b1;
+  border-radius: 5px;
+}
+.checkbox label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #13353f;
+  cursor: pointer;
+}
+.checkbox label span {
+  display: inline-block;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.checkbox input[type='checkbox']:checked + label {
+  color: #0097b3;
+}
+.checkbox input[type='checkbox']:checked + label .checkbox__item {
+  position: relative;
+  background-color: #1797b1;
+}
+.checkbox input[type='checkbox']:checked + label .checkbox__item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/image/bg-elements/icon-check.svg") center no-repeat;
+}
+.checkbox.checkbox--info input[type='checkbox']:checked + label {
+  font-weight: bold;
+}
+.checkbox.checkbox--info input[type='checkbox']:checked + label .checkbox__item {
+  background-color: #fff;
+  border-color: #fff;
+}
+.checkbox.checkbox--info input[type='checkbox']:checked + label .checkbox__item:before {
+  background: url("/image/bg-elements/icon-check--white.svg") center no-repeat;
 }
