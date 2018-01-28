@@ -1,0 +1,19 @@
+mixin checkBox(item, info)
+    each val in item
+        .checkbox(class= info ? 'checkbox--info' : '')
+            input(type="checkbox" id= val.id)
+            label(for= val.id)
+                span.checkbox__item
+                span= val.text
+
+mixin radio(item)
+    .radio
+        each val in item
+            input(type="radio" id= val.id name= val.name value="y" checked= val.checked)
+            label(for= val.id)
+                span.radio__item
+                span.radio__text= val.text
+                
+
++checkBox()
++radio()
